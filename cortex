@@ -390,7 +390,7 @@ class Entry(object):
 
     def __eq__(self, other):
         if "id" not in self.data or "id" not in other.data:
-            return false;
+            return False
         return other.data["id"] == self.data["id"]
 
     def _line_format(self, line, width):
