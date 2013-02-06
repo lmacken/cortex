@@ -658,6 +658,7 @@ class Interface(object):
             y += 1
 
         if self.data.error:
+            self.data.error = self.data.error[:width-1]
             self.scr.addstr(y, 0, self.data.error.center(width-1))
         else:
             self.scr.addstr(y, 0, "Loading...".center(width-1) if self.data.loading else " "*(width-1))
